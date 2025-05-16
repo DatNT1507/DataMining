@@ -1,0 +1,116 @@
+.dashboard-container {
+  padding: 2rem;
+  background: #f9fafb;
+}
+
+.dashboard-container h1 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+/* Tabs */
+.tab-header {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab-button {
+  padding: 0.5rem 1.25rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.tab-button:hover {
+  background-color: #f3f4f6;
+}
+
+.tab-button.active {
+  background-color: #5B8FF9;
+  color: #fff;
+  border-color: #5B8FF9;
+}
+
+.tab-content {
+  padding-top: 1rem;
+}
+
+.chart-box {
+  margin: 1.5rem 0;             /* cách trên dưới giữa các chart */
+  padding: 1rem;                /* khoảng đệm bên trong */
+  background-color: #ffffff;    /* nền trắng để nổi bật */
+  border: 1px solid #e2e8f0;    /* đường viền nhẹ */
+  border-radius: 8px;           /* bo góc mềm mại */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* đổ bóng nhẹ */
+}
+
+.correlation-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+
+.correlation-row .chart-box {
+  flex: 1;               /* mỗi chart chiếm đều nhau */
+  min-width: 0;          /* tránh tràn khi text dài */
+}
+
+.PieChartBox {
+  flex: 1;                             /* mỗi chart chiếm đều 1 phần trong row */
+  min-width: 160px;                    /* tránh quá nhỏ trên màn hình hẹp */
+  margin: 0 0.5rem;                    /* khoảng cách ngang giữa các chart */
+  padding: 1rem;                       /* khoảng đệm bên trong */
+  background-color: #ffffff;           /* nền trắng nổi bật */
+  border: 1px solid #e2e8f0;           /* viền nhạt để tách biệt */
+  border-radius: 8px;                  /* bo góc nhẹ */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* đổ bóng nhẹ tạo chiều sâu */
+  text-align: center;                  /* căn giữa tiêu đề và chart */
+  overflow: visible;
+}
+
+.PieChartBox:hover {
+  /* Nhúc nhích lên trên và phóng to nhẹ */
+  transform: translateY(-4px) scale(1.02);
+
+  /* Tăng đậm shadow để nổi bật */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* đảm bảo không bị che bởi các phần tử xung quanh */
+}
+
+
+.PieChartBox h3 {
+  margin: 0.5rem 0;                    /* khoảng cách trên dưới của tiêu đề */
+  font-size: 1.1rem;                   /* cỡ chữ hơi lớn để rõ ràng */
+  color: #333;                         /* màu chữ đậm dễ đọc */
+}
+
+/* Legend chung */
+.common-legend {
+  display: flex;
+  justify-content:flex-start;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  padding-left: 2rem;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.4rem;
+}

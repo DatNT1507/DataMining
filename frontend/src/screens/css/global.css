@@ -1,0 +1,86 @@
+/* Layout chung */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(135deg, #f0f2f5 0%, #e2e8f0 100%);
+  font-family: 'Inter', sans-serif;
+}
+.container {
+  flex: 1;                    /* Chiếm toàn bộ còn lại */
+  padding-top: 40px;          /* Để tránh bị navbar che */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background: #f9fafb;
+  overflow-y: auto;
+}
+
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+
+/* Navbar toàn cục */
+.navbar {
+  position: fixed;         /* Cố định trên cùng */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;           /* Đảm bảo nằm trên các phần tử khác */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 60px;
+  background-color: #333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* thêm bóng nhẹ cho đẹp */
+}
+
+/* .navbar-left {
+  flex: 1;
+}
+
+.navbar-right {
+  flex: 3;
+  display: flex;
+  justify-content:space-around;
+} */
+
+/* Logo chiếm khoảng nhỏ bên trái */
+.logo {
+  color: #2375d3;
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex: 1;
+}
+
+/* Nav-links chiếm khoảng rộng hơn bên phải */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem; /* tăng khoảng cách giữa các link */
+  margin: 0;
+  padding: 0;
+  flex: 3; /* mở rộng phần chứa các link để cân bằng hơn với logo */
+  justify-content:flex-end; /* đảm bảo luôn nằm sát phải */
+}
+
+/* Các link bên trong */
+.nav-links a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+  /* display: flex; */
+  align-items: center;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+.nav-links .active {
+  color: #5B8FF9;
+}
